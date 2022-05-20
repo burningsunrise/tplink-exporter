@@ -3,6 +3,7 @@
 
 A tplink exporter for prometheus, written in go. Uses [ants](https://github.com/panjf2000/ants), [logrus](https://github.com/sirupsen/logrus), [godotenv](github.com/joho/godotenv), [prometheus](github.com/prometheus/client_golang)
 
+
 Ants is used to create a 20 item pool of goroutines. Feel free to change that number [here](collector/collector.go#L170)
 
 Supported/Tested Hardware & Firmware:
@@ -10,7 +11,10 @@ Supported/Tested Hardware & Firmware:
 - T2600G = 3.0.3fw
 - T1600G = 3.0.3fw
 
-Feel free to try on other TPLink hardware, the worse that happens is it doesn't work!
+Feel free to try on other TPLink hardware, and let me know if it works!
+
+Here is an example of CPU usage on a switch using this software vs using the built in STP metrics
+![tplink-exporter-cpu-usage](img/tplinkexporter_cpu_usage.png)
 
 - [tplink-exporter | prometheus](#tplink-exporter--prometheus)
   - [Building and Running](#building-and-running)
